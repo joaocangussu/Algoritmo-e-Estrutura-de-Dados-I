@@ -1,0 +1,141 @@
+#include <stdio.h>
+#include <math.h>
+
+void adicionar();
+void subtrair();
+void multiplicar();
+void dividir();
+void potencia();
+void raiz_quadrada();
+void resto();
+void bhaskara();
+
+int main() {
+    int escolha;
+
+    do {
+        printf("\nMENU:\n");
+        printf("1. Adição\n");
+        printf("2. Subtração\n");
+        printf("3. Multiplicação\n");
+        printf("4. Divisão\n");
+        printf("5. Potência\n");
+        printf("6. Raiz Quadrada\n");
+        printf("7. Resto\n");
+        printf("8. Bhaskara\n");
+        printf("0. Sair\n");
+        printf("Escolha uma opção: ");
+        scanf("%d", &escolha);
+
+        switch (escolha) {
+            case 1:
+                adicionar();
+                break;
+            case 2:
+                subtrair();
+                break;
+            case 3:
+                multiplicar();
+                break;
+            case 4:
+                dividir();
+                break;
+            case 5:
+                potencia();
+                break;
+            case 6:
+                raiz_quadrada();
+                break;
+            case 7:
+                resto();
+                break;
+            case 8:
+                bhaskara();
+                break;
+            case 0:
+                printf("Encerrando...\n");
+                break;
+            default:
+                printf("Opção inválida! Tente novamente.\n");
+        }
+    } while (escolha != 0);
+
+    return 0;
+}
+
+void adicionar() {
+    double a, b;
+    printf("Digite dois números: ");
+    scanf("%lf %lf", &a, &b);
+    printf("Resultado: %.2lf\n", a + b);
+}
+
+void subtrair() {
+    double a, b;
+    printf("Digite dois números: ");
+    scanf("%lf %lf", &a, &b);
+    printf("Resultado: %.2lf\n", a - b);
+}
+
+void multiplicar() {
+    double a, b;
+    printf("Digite dois números: ");
+    scanf("%lf %lf", &a, &b);
+    printf("Resultado: %.2lf\n", a * b);
+}
+
+void dividir() {
+    double a, b;
+    printf("Digite dois números: ");
+    scanf("%lf %lf", &a, &b);
+    if (b != 0) {
+        printf("Resultado: %.2lf\n", a / b);
+    } else {
+        printf("Erro: Divisão por zero!\n");
+    }
+}
+
+void potencia() {
+    double base, expoente;
+    printf("Digite a base e o expoente: ");
+    scanf("%lf %lf", &base, &expoente);
+    printf("Resultado: %.2lf\n", pow(base, expoente));
+}
+
+void raiz_quadrada() {
+    double numero;
+    printf("Digite um número: ");
+    scanf("%lf", &numero);
+    if (numero >= 0) {
+        printf("Resultado: %.2lf\n", sqrt(numero));
+    } else {
+        printf("Erro: Raiz quadrada de número negativo!\n");
+    }
+}
+
+void resto() {
+    int a, b;
+    printf("Digite dois números inteiros: ");
+    scanf("%d %d", &a, &b);
+    if (b != 0) {
+        printf("Resultado: %d\n", a % b);
+    } else {
+        printf("Erro: Divisão por zero!\n");
+    }
+}
+
+void bhaskara() {
+    double a, b, c, delta, x1, x2;
+    printf("Digite os coeficientes a, b e c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+    
+    delta = b * b - 4 * a * c;
+    
+    if (delta < 0) {
+        printf("Erro: Não existem raízes reais.\n");
+    } else {
+        x1 = (-b + sqrt(delta)) / (2 * a);
+        x2 = (-b - sqrt(delta)) / (2 * a);
+        printf("Raízes: x1 = %.2lf, x2 = %.2lf\n", x1, x2);
+    }
+}
