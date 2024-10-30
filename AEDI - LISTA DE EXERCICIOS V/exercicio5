@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int calcularMDC(int a, int b) {
+    if (b == 0)
+        return a;
+    return calcularMDC(b, a % b);
+}
+
+int main() {
+    int a, b;
+    printf("Digite dois números: ");
+    scanf("%d %d", &a, &b);
+
+    printf("O MDC de %d e %d é: %d\n", a, b, calcularMDC(a, b));
+    return 0;
+}

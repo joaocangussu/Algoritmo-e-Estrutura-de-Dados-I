@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+void inserirNoFinal(struct Node** head, int valor) {
+    struct Node* novoNode = (struct Node*)malloc(sizeof(struct Node));
+    novoNode->data = valor;
+    novoNode->next = NULL;
+
+    if (*head == NULL) {
+        *head = novoNode;
+    } else {
+        struct Node* temp = *head;
+        while (temp->next != NULL) {
+            temp = temp->next;
+        }
+        temp->next = novoNode;
+    }
+}
+
+int main() {
+    struct Node* head = NULL;
+    inserirNoFinal(&head, 10);
+    inserirNoFinal(&head, 20);
+    inserirNoFinal(&head, 30);
+
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d -> ", temp->data);
+        temp = temp->next;
+    }
+    printf("NULL\n");
+
+    return 0;
+}

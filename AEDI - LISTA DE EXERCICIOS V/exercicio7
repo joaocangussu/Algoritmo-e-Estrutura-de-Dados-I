@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Carro {
+    char marca[50];
+    char modelo[50];
+    int ano;
+};
+
+int carrosMesmoModelo(struct Carro c1, struct Carro c2) {
+    return strcmp(c1.modelo, c2.modelo) == 0;
+}
+
+int main() {
+    struct Carro carro1, carro2;
+
+    printf("Informe a marca do primeiro carro: ");
+    scanf(" %[^\n]", carro1.marca);
+    printf("Informe o modelo do primeiro carro: ");
+    scanf(" %[^\n]", carro1.modelo);
+    printf("Informe o ano do primeiro carro: ");
+    scanf("%d", &carro1.ano);
+
+    printf("Informe a marca do segundo carro: ");
+    scanf(" %[^\n]", carro2.marca);
+    printf("Informe o modelo do segundo carro: ");
+    scanf(" %[^\n]", carro2.modelo);
+    printf("Informe o ano do segundo carro: ");
+    scanf("%d", &carro2.ano);
+
+    if (carrosMesmoModelo(carro1, carro2)) {
+        printf("Os carros são do mesmo modelo.\n");
+    } else {
+        printf("Os carros não são do mesmo modelo.\n");
+    }
+    return 0;
+}
