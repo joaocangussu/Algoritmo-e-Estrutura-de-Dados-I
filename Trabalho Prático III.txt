@@ -1,0 +1,32 @@
+- Iniciação
+Na fase de Iniciação, o gestor reúne as principais partes interessadas e define o escopo inicial do projeto.
+Esse momento é crucial para entender os requisitos, como busca de disponibilidade, sistema de pagamentos e confirmação de reserva. 
+Também se faz um estudo de viabilidade para avaliar se o projeto é viável financeiramente e tecnicamente. 
+No fim dessa etapa, o termo de abertura do projeto é criado, formalizando a aprovação e os objetivos gerais.
+
+- Planejamento
+No Planejamento, são detalhadas todas as atividades e recursos necessários para o desenvolvimento do sistema. 
+O gestor organiza um cronograma, orçamento e define os critérios de qualidade e riscos, garantindo que todos estejam preparados para as próximas etapas. 
+Também são planejadas a comunicação com a equipe e a gestão dos recursos humanos, documentando os requisitos detalhados e dividindo o trabalho em tarefas específicas.
+
+- Execução
+Na fase de Execução, o sistema começa a ser desenvolvido. As equipes de desenvolvimento trabalham na criação das funcionalidades principais, 
+como reserva de quartos, pagamentos e autenticação de usuários. O sistema é integrado a outras plataformas, como as de pagamento e segurança, 
+e o banco de dados é configurado para armazenar informações de quartos e reservas. São realizados testes internos, e a equipe do hotel recebe treinamento 
+para operar o sistema.
+
+- Monitoramento e Controle
+Durante o Monitoramento e Controle, o gestor acompanha o andamento do projeto em relação ao cronograma e orçamento, fazendo ajustes quando necessário. 
+O sistema é continuamente testado para garantir qualidade, e eventuais solicitações de mudanças são avaliadas e implementadas de forma controlada. 
+A performance é analisada para assegurar que o sistema atenda aos requisitos definidos, como rapidez e segurança.
+
+- Encerramento
+Na fase de Encerramento, o sistema é entregue formalmente ao hotel, e uma validação final é feita para garantir que todos os requisitos foram atendidos. 
+Toda a documentação, incluindo manuais e relatórios técnicos, é entregue ao cliente. 
+A equipe realiza uma avaliação final para identificar lições aprendidas e finalizar o projeto.
+
+
+
+
+
+
